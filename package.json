@@ -1,0 +1,20 @@
+{
+  "name": "jobee-api",
+  "version": "1.0.0",
+  "description": "api about jobs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "prod": "SET NODE_ENV=production && nodemon app.js"
+  },
+  "author": "Samuel Owusu",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
