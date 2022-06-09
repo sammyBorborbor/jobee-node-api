@@ -9,16 +9,18 @@ dotenv.config({path: "./config/config.env"});
 // setting up the database
 connectDatabase();
 
+// setup body parser
+app.use(express.json());
 // setting up the middlewares
-const middleware = (req, res, next) => {
-    console.log("Hello from middleware");
-
-    // setting up user
-    // req.user = 'Samuel Owusu';
-    req.requestMethod = req.method;
-    next();
-}
-app.use(middleware);
+// const middleware = (req, res, next) => {
+//     console.log("Hello from middleware");
+//
+//     // setting up user
+//     // req.user = 'Samuel Owusu';
+//     req.requestMethod = req.method;
+//     next();
+// }
+// app.use(middleware);
 
 const jobs = require("./routes/jobs");
 app.use('/api/v1', jobs);
