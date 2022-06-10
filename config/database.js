@@ -5,7 +5,7 @@ const connectDatabase = () => {
     mongoose.connect(db, {
         useNewUrlParser: true,
     }).then(con => {
-        console.log(`Database connected successfully with host ${con.connection.host}`);
+        console.log(`Database connected successfully with host: ${con.connection.host}`);
     });
 }
 
